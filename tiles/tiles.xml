@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE tiles-definitions PUBLIC "-//Apache Software Foundation//DTD Tiles Configuration 2.0//EN" "http://tiles.apache.org/dtds/tiles-config_2_0.dtd">
+
+<tiles-definitions>
+	<definition name="baseLayout" template="/views/Layout/MasterPage.jsp">
+        <put-attribute name="jquery" value="js/jquery-3.2.1.min.js" />
+        <put-attribute name="bootstrapscript" value="js/bootstrap.js" />
+   		<put-attribute name="bootstrap" value="css/bootstrap/bootstrap.css" />
+        <put-attribute name="bootstrapcss" value="css/bootstrap/bootstrap.min.css" />
+        <put-attribute name="basecss" value="css/base.css" />
+	</definition>
+	
+	<definition name="baseLayout2" template="/views/Layout/MasterPage2.jsp">
+		<put-attribute name="title" value="" />
+		<put-attribute name="header" value="/views/Layout/Header.jsp" />
+		<put-attribute name="menu" value="/views/Layout/Menu.jsp" />
+		<put-attribute name="body" value="" />	
+        <put-attribute name="bootstrapcss" value="css/bootstrap.min.css" />     
+        <put-attribute name="stylecss" value="css/style.css" />
+        <put-attribute name="defaultcss" value="color/default.css" />
+	</definition>
+	
+	<definition name="welcome.tiles" extends="baseLayout">	 
+	</definition>
+	
+	<definition name="login.tiles" extends="baseLayout2">
+		<put-attribute name="title" value="Login Success" />
+		<put-attribute name="body" value="/views/Layout/Body.jsp" /> 
+	</definition>
+	<definition name="registerForm.tiles" extends="baseLayout2">
+		<put-attribute name="body" value="/views/Register.jsp" /> 
+	</definition>
+	<definition name="upload.tiles" extends="baseLayout2">
+		<put-attribute name="title" value="Upload File" />
+		<put-attribute name="body" value="/views/fileupload.jsp" /> 
+	</definition>
+	
+	<definition name="download.tiles" extends="baseLayout2">
+		<put-attribute name="title" value="Download File" />
+		<put-attribute name="body" value="/views/filedownload.jsp" /> 
+	</definition> 
+	
+	<definition name="shareFile.tiles" extends="baseLayout2">
+		<put-attribute name="title" value="Share File" />
+		<put-attribute name="body" value="/views/sharefile.jsp" /> 
+	</definition> 
+	
+	<definition name="shareFileSuccess.tiles" extends="baseLayout2">
+		<put-attribute name="title" value="Share File Success" />
+		<put-attribute name="body" value="/views/sharefilesuccess.jsp" /> 
+	</definition>  
+	
+	<definition name="downloadFileSuccess.tiles" extends="baseLayout2">
+		<put-attribute name="title" value="Download File Success" />
+		<put-attribute name="body" value="/views/filedownloadsuccess.jsp" /> 
+	</definition>  
+	
+	<definition name="view.tiles" extends="baseLayout2">
+		<put-attribute name="title" value="View File" />
+		<put-attribute name="body" value="/views/viewfies.jsp" /> 
+	</definition> 
+	
+	<definition name="viewrequest.tiles" extends="baseLayout2">
+		<put-attribute name="title" value="View Request" />
+		<put-attribute name="body" value="/views/viewrequest.jsp" /> 
+	</definition> 
+	
+</tiles-definitions>

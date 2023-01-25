@@ -1,0 +1,120 @@
+/*
+#1 color = #4ACCD1;
+#2 color = #3fbbc0;
+*/
+
+a:hover,
+a:focus {
+    color: #00ABEF;
+}
+
+.circled {
+	background:#00ABEF;
+}
+
+.con1 > div, .con2 > div, .con3 > div { 
+	background-color: #00ABEF;
+}
+
+.scrollup:hover {
+	background: #00ABEF;
+}
+
+
+/* service */
+
+.service-icon span {
+	color: #00ABEF;
+}
+
+
+
+/* button */
+.btn-skin {
+  background-color: #00ABEF;
+  border-color: #00ABEF;
+}
+
+
+/* top */
+.top-area {
+	background: #00ABEF;
+}
+
+/* menu */
+
+.navbar-custom ul.nav ul.dropdown-menu li a:hover {
+	color: #00ABEF;
+}
+.navbar-custom.top-nav-collapse .nav li a:hover,
+.navbar-custom .nav li a:hover,
+.navbar-custom .nav li.active a,.navbar-custom.top-nav-collapse .nav li.active a  {
+    color: #00ABEF;
+}
+
+
+.owl-theme .owl-controls .owl-page.active span,
+.owl-theme .owl-controls.clickable .owl-page:hover span {
+    background-color: #00ABEF;
+}
+
+
+.bg-skin {
+	background: #00ABEF;
+}
+
+.highlight-color {
+	background-color: #00ABEF;
+}
+.color {
+	color: #00ABEF;
+}
+
+/* pricing box  */
+.pricing-content.featured h2,.pricing-content.featured .price-bottom {
+	background-color:#00ABEF;
+}
+.pricing-content.featured h3 {
+	background:#00ABEF;
+}
+
+
+
+/* team */
+.cbp-l-grid-team-name {
+    color: #00ABEF;
+}
+
+.cbp-l-filters-button .cbp-filter-counter {
+	background-color: #00ABEF;
+}
+
+.cbp-l-filters-alignLeft .cbp-filter-item-active {
+    /* @editable properties */
+    background-color: #00ABEF;
+    border:1px solid #00ABEF;
+}
+
+.cbp-l-filters-dropdownWrap {
+    background: #00ABEF;
+}
+.cbp-l-filters-button .cbp-filter-item.cbp-filter-item-active {
+    /* @editable properties */
+    background-color: #00ABEF;
+    border-color: #00ABEF;
+}
+.cbp-l-caption-buttonLeft,
+.cbp-l-caption-buttonRight {
+    /* @editable properties */
+    background-color: #00ABEF;
+}
+
+.cbp-l-caption-buttonLeft:hover,
+.cbp-l-caption-buttonRight:hover {
+    /* @editable properties */
+    background-color: #00ABEF;
+}
+
+.form-control:focus {
+  border-color: #00ABEF;
+}

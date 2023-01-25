@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+	"http://struts.apache.org/dtds/struts-2.3.dtd">
+
+<struts>
+
+    <constant name="struts.enable.DynamicMethodInvocation" value="false" />
+    <constant name="struts.devMode" value="true" />
+    
+    <constant name="struts.i18n.reload" value="false" />
+    <constant name="struts.configuration.xml" value="false" />
+    <constant name="struts.freemarker.templatesCache" value="true" />
+    <constant name="struts.freemarker.templatesCache.updateDelay" value="120" />
+    <constant name="struts.freemarker.mru.max.strong.size" value="120" /> 
+
+    <package name="default" namespace="/" extends="struts-default">
+		<result-types>
+			<result-type name="tiles" class="org.apache.struts2.views.tiles.TilesResult" />
+		</result-types>
+		
+		<action name="login" class="myapp.loginAction" method="login">
+			<result name="success" type="tiles">login.tiles</result>
+			<result name="error" type="tiles">welcome.tiles</result>
+		</action>
+		
+		<action name="home" class="myapp.homeAction" method="execute">
+			<result name="success" type="tiles">login.tiles</result>
+		</action>
+		
+		<action name="logout" class="myapp.homeAction" method="logout">
+			<result name="success">/views/layout/Home.jsp</result>
+		</action>
+		
+		
+		<action name="registerForm" class="myapp.RegisterForm" method="execute">
+			<result name="success" type="tiles">registerForm.tiles</result>
+		</action>
+		
+		<action name="register" class="myapp.RegisterAction" method="register">
+			<result name="success" type="tiles">welcome.tiles</result>
+			<result name="error" type="tiles">registerForm.tiles</result>
+		</action>
+		
+		<action name="uploadFileForm" class="myapp.homeAction" method="uploadFileForm">
+			<result name="success" type="tiles">upload.tiles</result>
+		</action>
+		
+		<action name="uploadFile" class="myapp.homeAction" method="uploadFile">
+			<result name="success" type="tiles">login.tiles</result>
+			<result name="error" type="tiles">upload.tiles</result>
+		</action>
+		
+	
+		<action name="downloadFile" class="myapp.homeAction" method="downloadFile">
+			<result name="success" type="tiles">download.tiles</result>
+		</action>
+		
+		<action name="downloadFileSuccess" class="myapp.homeAction" method="downloadFileSuccess">
+			 <result name="success" type="tiles">downloadFileSuccess.tiles</result> 
+			
+		</action>
+		
+		  <action name="download" class="myapp.homeAction" method="download">
+		  <result name="success" type="stream">
+				<param name="contentType">application/octet-stream</param>
+				<param name="inputName">inputStream</param>
+				<param name="contentDisposition">attachment;filename="${fileName}"</param>
+				<param name="bufferSize">4096</param> 
+			</result>  
+			 <!-- <result name="success" type="tiles">download.tiles</result> -->
+			<result name="error" type="tiles">downloadFileSuccess.tiles</result> 
+		</action>  
+		
+		<action name="shareFile" class="myapp.homeAction" method="shareFile">
+			<result name="success" type="tiles">shareFile.tiles</result>
+		</action>
+		
+		<action name="shareFileSuccess" class="myapp.homeAction" method="shareFileSuccess">
+			<result name="success" type="tiles">shareFileSuccess.tiles</result>
+		</action> 
+		<action name="shareFileSuccessSend" class="myapp.homeAction" method="shareFileSuccessSend">
+			<result name="success" type="tiles">login.tiles</result>
+		</action>
+		
+		<action name="viewFile" class="myapp.homeAction" method="viewFile">
+			<result name="success" type="tiles">view.tiles</result>
+		</action>
+		
+		<action name="viewRequest" class="myapp.homeAction" method="viewRequest">
+			<result name="success" type="tiles">viewrequest.tiles</result>
+		</action>
+		<action name="viewFileRequest" class="myapp.homeAction" method="viewFileRequest">
+			<result name="success" type="tiles">viewrequest.tiles</result>
+		</action>
+		<action name="viewRequestResponse" class="myapp.homeAction" method="viewRequestResponse">
+			<result name="success" type="tiles">viewrequest.tiles</result>
+		</action>
+    </package>
+</struts>
